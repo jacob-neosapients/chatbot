@@ -9,7 +9,11 @@ import requests
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+
+# CORS Configuration
+# For production: Update allowed origins to match your Amplify domain
+# Example: CORS(app, origins=["https://your-app.amplifyapp.com"])
+CORS(app)  # Development: Allow all origins
 
 import uuid
 
@@ -70,6 +74,90 @@ def get_stats_from_amplify():
         print(f"Failed to get stats from Amplify: {e}")
     
     return None
+
+def save_to_amplify_graphql(prompt, predicted_class, confidence, time_taken, entry_id):
+    """Save training data to Amplify GraphQL API"""
+    mutation = """
+    mutation CreateTrainingData($input: CreateTrainingDataInput!) {
+      createTrainingData(input: $input) {
+        id
+        timestamp
+        prompt
+        predictedClass
+        label
+        confidence
+        processingTime
+        userFlaggedIncorrect
+      }
+    }
+    """
+
+    variables = {
+        "input": {
+            "id": entry_id,
+            "timestamp": datetime.now().isoformat(),
+            "prompt": prompt,
+            "predictedClass": predicted_class,
+            "label": "SAFE" if predicted_class == 0 else "MISUSE",
+            "confidence": float(confidence),
+            "processingTime": float(time_taken),
+            "userFlaggedIncorrect": False
+        }
+    }
+
+    headers = {
+        'Content-Type': 'application/json',
+        'x-api-key': AMPLIFY_API_KEY
+    }
+
+    try:
+        response = requests.post(
+            AMPLIFY_GRAPHQL_ENDPOINT,
+            json={'query': mutation, 'variables': variables},
+            headers=headers,
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"Failed to save to Amplify: {e}")
+        return False
+
+def flag_in_amplify_graphql(entry_id):
+    """Flag a classification as incorrect in Amplify GraphQL"""
+    mutation = """
+    mutation UpdateTrainingData($input: UpdateTrainingDataInput!) {
+      updateTrainingData(input: $input) {
+        id
+        userFlaggedIncorrect
+      }
+    }
+    """
+
+    variables = {
+        "input": {
+            "id": entry_id,
+            "userFlaggedIncorrect": True
+        }
+    }
+
+    headers = {
+        'Content-Type': 'application/json',
+        'x-api-key': AMPLIFY_API_KEY
+    }
+
+    try:
+        response = requests.post(
+            AMPLIFY_GRAPHQL_ENDPOINT,
+            json={'query': mutation, 'variables': variables},
+            headers=headers,
+            timeout=10
+        )
+        response.raise_for_status()
+        return True
+    except Exception as e:
+        print(f"Failed to flag in Amplify: {e}")
+        return False
 
 def save_prompt_for_training(prompt, predicted_class, confidence, time_taken):
     """Save prompt data - tries Amplify first, falls back to JSONL"""

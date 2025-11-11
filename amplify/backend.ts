@@ -7,4 +7,9 @@ const backend = defineBackend({
   auth,
 });
 
+// Note: Amplify Gen 2 Data with a.schema() uses DynamoDB by default.
+// DynamoDB doesn't require maintenance windows or traditional backups.
+// Point-in-time recovery and on-demand backups can be configured if needed.
+// For production: Consider enabling point-in-time recovery in AWS Console after deployment.
+
 export default backend;

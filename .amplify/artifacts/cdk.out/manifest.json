@@ -1,0 +1,1682 @@
+{
+  "version": "48.0.0",
+  "artifacts": {
+    "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "amplify:deployment-type": "sandbox",
+          "created-by": "amplify"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ea1f530512316eb72226f0817b04f2da375eeed0e962dcbf476d31723f6a7c6e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0.assets"
+      ],
+      "metadata": {
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ]
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/deploymentType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deploymentType"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "region"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPool95BAC2D9Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPool95BAC2D9Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPoolAppClient5A2E7992Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPoolAppClient5A2E7992Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth/amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/mfaConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaConfiguration"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/mfaTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaTypes"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/socialProviders": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "socialProviders"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthCognitoDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthCognitoDomain"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthScope": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthScope"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthRedirectSignIn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignIn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthRedirectSignOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignOut"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthResponseType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthResponseType"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/oauthClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthClientId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/groups": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "groups"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/GraphQLAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPI42A6FA33"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/GraphQLAPI/TransformerSchema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/GraphQLAPI/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPIDefaultApiKey1C8ED374"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/GraphQLAPI/NONE_DS": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPINONEDS684BF699"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableIsCompleteRoleF825222C"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRole470BE899"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachine060600BC"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager/amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent44861F2BArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent44861F2BArn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataTable/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TrainingDataTable"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/CustomTableTrainingDataTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/GetAttTrainingDataTableStreamArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttTrainingDataTableStreamArn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/GetAttTrainingDataTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttTrainingDataTableName"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingDataIAMRole"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TrainingDataIAMRole1A990F74"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingDataIAMRole"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingDataTable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/TrainingDataDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TrainingDataDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "TrainingDataTable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerygetTrainingDatapreAuth0Function/QuerygetTrainingDatapreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetTrainingDatapreAuth0FunctionQuerygetTrainingDatapreAuth0FunctionAppSyncFunction0AF38D81"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetTrainingDatapreAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerygetTrainingDataauth0Function/QuerygetTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetTrainingDataauth0FunctionQuerygetTrainingDataauth0FunctionAppSyncFunction2569E899"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerygetTrainingDatapostAuth0Function/QuerygetTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetTrainingDatapostAuth0FunctionQuerygetTrainingDatapostAuth0FunctionAppSyncFunctionA6588AEA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QueryGetTrainingDataDataResolverFn/QueryGetTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetTrainingDataDataResolverFnQueryGetTrainingDataDataResolverFnAppSyncFunctionC644A0F2"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/queryGetTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerylistTrainingDatapreAuth0Function/QuerylistTrainingDatapreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistTrainingDatapreAuth0FunctionQuerylistTrainingDatapreAuth0FunctionAppSyncFunction0BBD396F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistTrainingDatapreAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerylistTrainingDataauth0Function/QuerylistTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistTrainingDataauth0FunctionQuerylistTrainingDataauth0FunctionAppSyncFunction3ECF40B0"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QuerylistTrainingDatapostAuth0Function/QuerylistTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistTrainingDatapostAuth0FunctionQuerylistTrainingDatapostAuth0FunctionAppSyncFunction227DCF9B"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/QueryListTrainingDataDataResolverFn/QueryListTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListTrainingDataDataResolverFnQueryListTrainingDataDataResolverFnAppSyncFunction56597BCA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/queryListTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationcreateTrainingDatainit0Function/MutationcreateTrainingDatainit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateTrainingDatainit0FunctionMutationcreateTrainingDatainit0FunctionAppSyncFunctionD61A8E18"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateTrainingDatainit0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationcreateTrainingDatainit1Function/MutationcreateTrainingDatainit1Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateTrainingDatainit1FunctionMutationcreateTrainingDatainit1FunctionAppSyncFunctionB229CB16"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateTrainingDatainit1Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationcreateTrainingDatapreAuth0Function/MutationcreateTrainingDatapreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateTrainingDatapreAuth0FunctionMutationcreateTrainingDatapreAuth0FunctionAppSyncFunctionBB1A118C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateTrainingDatapreAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationcreateTrainingDataauth0Function/MutationcreateTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateTrainingDataauth0FunctionMutationcreateTrainingDataauth0FunctionAppSyncFunctionA77E2248"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationcreateTrainingDatapostAuth0Function/MutationcreateTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateTrainingDatapostAuth0FunctionMutationcreateTrainingDatapostAuth0FunctionAppSyncFunctionE60910B0"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationCreateTrainingDataDataResolverFn/MutationCreateTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateTrainingDataDataResolverFnMutationCreateTrainingDataDataResolverFnAppSyncFunction616730F4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/mutationCreateTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationupdateTrainingDatainit0Function/MutationupdateTrainingDatainit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateTrainingDatainit0FunctionMutationupdateTrainingDatainit0FunctionAppSyncFunction7E0ACD81"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateTrainingDatainit0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationupdateTrainingDatapreAuth0Function/MutationupdateTrainingDatapreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateTrainingDatapreAuth0FunctionMutationupdateTrainingDatapreAuth0FunctionAppSyncFunctionE4AC870C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateTrainingDatapreAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationupdateTrainingDataauth0Function/MutationupdateTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateTrainingDataauth0FunctionMutationupdateTrainingDataauth0FunctionAppSyncFunction26FD492E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationupdateTrainingDatapostAuth0Function/MutationupdateTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateTrainingDatapostAuth0FunctionMutationupdateTrainingDatapostAuth0FunctionAppSyncFunctionA793E295"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationUpdateTrainingDataDataResolverFn/MutationUpdateTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateTrainingDataDataResolverFnMutationUpdateTrainingDataDataResolverFnAppSyncFunctionDE856E0E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/mutationUpdateTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationdeleteTrainingDatapreAuth0Function/MutationdeleteTrainingDatapreAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteTrainingDatapreAuth0FunctionMutationdeleteTrainingDatapreAuth0FunctionAppSyncFunction70B7DD0C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteTrainingDatapreAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationdeleteTrainingDataauth0Function/MutationdeleteTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteTrainingDataauth0FunctionMutationdeleteTrainingDataauth0FunctionAppSyncFunction3077C5FB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationdeleteTrainingDatapostAuth0Function/MutationdeleteTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteTrainingDatapostAuth0FunctionMutationdeleteTrainingDatapostAuth0FunctionAppSyncFunction9703735F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/MutationDeleteTrainingDataDataResolverFn/MutationDeleteTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteTrainingDataDataResolverFnMutationDeleteTrainingDataDataResolverFnAppSyncFunctionBEC0DB8A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/mutationDeleteTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononCreateTrainingDataauth0Function/SubscriptiononCreateTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateTrainingDataauth0FunctionSubscriptiononCreateTrainingDataauth0FunctionAppSyncFunctionF6B84492"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononCreateTrainingDatapostAuth0Function/SubscriptiononCreateTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateTrainingDatapostAuth0FunctionSubscriptiononCreateTrainingDatapostAuth0FunctionAppSyncFunction4E97CBCB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptionOnCreateTrainingDataDataResolverFn/SubscriptionOnCreateTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateTrainingDataDataResolverFnSubscriptionOnCreateTrainingDataDataResolverFnAppSyncFunctionD44776C4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/subscriptionOnCreateTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononUpdateTrainingDataauth0Function/SubscriptiononUpdateTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateTrainingDataauth0FunctionSubscriptiononUpdateTrainingDataauth0FunctionAppSyncFunctionB0C7377B"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononUpdateTrainingDatapostAuth0Function/SubscriptiononUpdateTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateTrainingDatapostAuth0FunctionSubscriptiononUpdateTrainingDatapostAuth0FunctionAppSyncFunction8FF149BE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptionOnUpdateTrainingDataDataResolverFn/SubscriptionOnUpdateTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateTrainingDataDataResolverFnSubscriptionOnUpdateTrainingDataDataResolverFnAppSyncFunction78B12F0D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/subscriptionOnUpdateTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononDeleteTrainingDataauth0Function/SubscriptiononDeleteTrainingDataauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteTrainingDataauth0FunctionSubscriptiononDeleteTrainingDataauth0FunctionAppSyncFunctionEA2461FB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteTrainingDataauth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptiononDeleteTrainingDatapostAuth0Function/SubscriptiononDeleteTrainingDatapostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteTrainingDatapostAuth0FunctionSubscriptiononDeleteTrainingDatapostAuth0FunctionAppSyncFunction05A5F377"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteTrainingDatapostAuth0Function"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/SubscriptionOnDeleteTrainingDataDataResolverFn/SubscriptionOnDeleteTrainingDataDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteTrainingDataDataResolverFnSubscriptionOnDeleteTrainingDataDataResolverFnAppSyncFunction7980E40F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteTrainingDataDataResolverFn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/subscriptionOnDeleteTrainingDataResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteTrainingDataResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteTrainingData"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource5985BD61Outputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent44861F2BArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource5985BD61Outputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyTableManagerTabC87E19E3"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPINONEDS1EBCB5B5Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPINONEDS1EBCB5B5Name"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/TrainingData.NestedStack/TrainingData.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataTrainingDataNestedStackTrainingDataNestedStackResourceB80D4D59"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/modelIntrospectionSchemaBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketF566B665"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPool95BAC2D9Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthUserPool95BAC2D9Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthauthenticatedUserRoleC893D864Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthunauthenticatedUserRoleC44FE3DDRef"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/reference-to-amplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputs.amplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyneoguardrailsjacoblazarsandbox0c29f201a0authNestedStackauthNestedStackResource598963DAOutputsamplifyneoguardrailsjacoblazarsandbox0c29f201a0authamplifyAuthIdentityPoolC19D9F64Ref"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631ApiId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631GraphQLUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIB5E18631GraphQLUrl"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB140911C6DestinationBucketArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB140911C6DestinationBucketArn"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data/amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIDefaultApiKeyB8088CB6ApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyneoguardrailsjacoblazarsandbox0c29f201a0dataamplifyDataGraphQLAPIDefaultApiKeyB8088CB6ApiKey"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/data.NestedStack/data.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "data7552DF31"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiId"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiEndpoint"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncAuthenticationType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAuthenticationType"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncRegion"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/amplifyApiModelSchemaS3Uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyApiModelSchemaS3Uri"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiKey"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/awsAppsyncAdditionalAuthenticationTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAdditionalAuthenticationTypes"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "amplify-neoguardrails-jacoblazar-sandbox-0c29f201a0"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "aws-cdk-lib/feature-flag-report": {
+      "type": "cdk:feature-flag-report",
+      "properties": {
+        "module": "aws-cdk-lib",
+        "flags": {
+          "@aws-cdk/aws-signer:signingProfileNamePassedToCfn": {
+            "recommendedValue": true,
+            "explanation": "Pass signingProfileName to CfnSigningProfile"
+          },
+          "@aws-cdk/core:newStyleStackSynthesis": {
+            "recommendedValue": true,
+            "explanation": "Switch to new stack synthesis method which enables CI/CD",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:stackRelativeExports": {
+            "recommendedValue": true,
+            "explanation": "Name exports based on the construct paths relative to the stack, rather than the global construct path",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-ecs-patterns:secGroupsDisablesImplicitOpenListener": {
+            "recommendedValue": true,
+            "explanation": "Disable implicit openListener when custom security groups are provided"
+          },
+          "@aws-cdk/aws-rds:lowercaseDbIdentifier": {
+            "recommendedValue": true,
+            "explanation": "Force lowercasing of RDS Cluster names in CDK",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": {
+            "recommendedValue": true,
+            "explanation": "Allow adding/removing multiple UsagePlanKeys independently",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-lambda:recognizeVersionProps": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to opt in to the updated logical id calculation for Lambda Version created using the  `fn.currentVersion`.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-lambda:recognizeLayerVersion": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to opt in to the updated logical id calculation for Lambda Version created using the `fn.currentVersion`."
+          },
+          "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to have cloudfront distributions use the security policy TLSv1.2_2021 by default.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:checkSecretUsage": {
+            "recommendedValue": true,
+            "explanation": "Enable this flag to make it impossible to accidentally use SecretValues in unsafe locations"
+          },
+          "@aws-cdk/core:target-partitions": {
+            "recommendedValue": [
+              "aws",
+              "aws-cn"
+            ],
+            "explanation": "What regions to include in lookup tables of environment agnostic stacks"
+          },
+          "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": {
+            "recommendedValue": true,
+            "explanation": "ECS extensions will automatically add an `awslogs` driver if no logging is specified"
+          },
+          "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to have Launch Templates generated by the `InstanceRequireImdsv2Aspect` use unique names."
+          },
+          "@aws-cdk/aws-ecs:arnFormatIncludesClusterName": {
+            "recommendedValue": true,
+            "explanation": "ARN format used by ECS. In the new ARN format, the cluster name is part of the resource ID."
+          },
+          "@aws-cdk/aws-iam:minimizePolicies": {
+            "recommendedValue": true,
+            "explanation": "Minimize IAM policies by combining Statements"
+          },
+          "@aws-cdk/core:validateSnapshotRemovalPolicy": {
+            "recommendedValue": true,
+            "explanation": "Error on snapshot removal policies on resources that do not support it."
+          },
+          "@aws-cdk/aws-codepipeline:crossAccountKeyAliasStackSafeResourceName": {
+            "recommendedValue": true,
+            "explanation": "Generate key aliases that include the stack name"
+          },
+          "@aws-cdk/aws-s3:createDefaultLoggingPolicy": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature flag to create an S3 bucket policy by default in cases where an AWS service would automatically create the Policy if one does not exist."
+          },
+          "@aws-cdk/aws-sns-subscriptions:restrictSqsDescryption": {
+            "recommendedValue": true,
+            "explanation": "Restrict KMS key policy for encrypted Queues a bit more"
+          },
+          "@aws-cdk/aws-apigateway:disableCloudWatchRole": {
+            "recommendedValue": true,
+            "explanation": "Make default CloudWatch Role behavior safe for multiple API Gateways in one environment"
+          },
+          "@aws-cdk/core:enablePartitionLiterals": {
+            "recommendedValue": true,
+            "explanation": "Make ARNs concrete if AWS partition is known"
+          },
+          "@aws-cdk/aws-events:eventsTargetQueueSameAccount": {
+            "recommendedValue": true,
+            "explanation": "Event Rules may only push to encrypted SQS queues in the same account"
+          },
+          "@aws-cdk/aws-ecs:disableExplicitDeploymentControllerForCircuitBreaker": {
+            "recommendedValue": true,
+            "explanation": "Avoid setting the \"ECS\" deployment controller when adding a circuit breaker"
+          },
+          "@aws-cdk/aws-iam:importedRoleStackSafeDefaultPolicyName": {
+            "recommendedValue": true,
+            "explanation": "Enable this feature to create default policy names for imported roles that depend on the stack the role is in."
+          },
+          "@aws-cdk/aws-s3:serverAccessLogsUseBucketPolicy": {
+            "recommendedValue": true,
+            "explanation": "Use S3 Bucket Policy instead of ACLs for Server Access Logging"
+          },
+          "@aws-cdk/aws-route53-patters:useCertificate": {
+            "recommendedValue": true,
+            "explanation": "Use the official `Certificate` resource instead of `DnsValidatedCertificate`"
+          },
+          "@aws-cdk/customresources:installLatestAwsSdkDefault": {
+            "recommendedValue": false,
+            "explanation": "Whether to install the latest SDK by default in AwsCustomResource"
+          },
+          "@aws-cdk/aws-rds:databaseProxyUniqueResourceName": {
+            "recommendedValue": true,
+            "explanation": "Use unique resource name for Database Proxy"
+          },
+          "@aws-cdk/aws-codedeploy:removeAlarmsFromDeploymentGroup": {
+            "recommendedValue": true,
+            "explanation": "Remove CloudWatch alarms from deployment group"
+          },
+          "@aws-cdk/aws-apigateway:authorizerChangeDeploymentLogicalId": {
+            "recommendedValue": true,
+            "explanation": "Include authorizer configuration in the calculation of the API deployment logical ID."
+          },
+          "@aws-cdk/aws-ec2:launchTemplateDefaultUserData": {
+            "recommendedValue": true,
+            "explanation": "Define user data for a launch template by default when a machine image is provided."
+          },
+          "@aws-cdk/aws-secretsmanager:useAttachedSecretResourcePolicyForSecretTargetAttachments": {
+            "recommendedValue": true,
+            "explanation": "SecretTargetAttachments uses the ResourcePolicy of the attached Secret."
+          },
+          "@aws-cdk/aws-redshift:columnId": {
+            "recommendedValue": true,
+            "explanation": "Whether to use an ID to track Redshift column changes"
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:enableEmrServicePolicyV2": {
+            "recommendedValue": true,
+            "explanation": "Enable AmazonEMRServicePolicy_v2 managed policies"
+          },
+          "@aws-cdk/aws-ec2:restrictDefaultSecurityGroup": {
+            "recommendedValue": true,
+            "explanation": "Restrict access to the VPC default security group"
+          },
+          "@aws-cdk/aws-apigateway:requestValidatorUniqueId": {
+            "recommendedValue": true,
+            "explanation": "Generate a unique id for each RequestValidator added to a method"
+          },
+          "@aws-cdk/aws-kms:aliasNameRef": {
+            "recommendedValue": true,
+            "explanation": "KMS Alias name and keyArn will have implicit reference to KMS Key"
+          },
+          "@aws-cdk/aws-kms:applyImportedAliasPermissionsToPrincipal": {
+            "recommendedValue": true,
+            "explanation": "Enable grant methods on Aliases imported by name to use kms:ResourceAliases condition"
+          },
+          "@aws-cdk/aws-autoscaling:generateLaunchTemplateInsteadOfLaunchConfig": {
+            "recommendedValue": true,
+            "explanation": "Generate a launch template when creating an AutoScalingGroup"
+          },
+          "@aws-cdk/core:includePrefixInUniqueNameGeneration": {
+            "recommendedValue": true,
+            "explanation": "Include the stack prefix in the stack name generation process"
+          },
+          "@aws-cdk/aws-efs:denyAnonymousAccess": {
+            "recommendedValue": true,
+            "explanation": "EFS denies anonymous clients accesses"
+          },
+          "@aws-cdk/aws-opensearchservice:enableOpensearchMultiAzWithStandby": {
+            "recommendedValue": true,
+            "explanation": "Enables support for Multi-AZ with Standby deployment for opensearch domains"
+          },
+          "@aws-cdk/aws-lambda-nodejs:useLatestRuntimeVersion": {
+            "recommendedValue": true,
+            "explanation": "Enables aws-lambda-nodejs.Function to use the latest available NodeJs runtime as the default"
+          },
+          "@aws-cdk/aws-efs:mountTargetOrderInsensitiveLogicalId": {
+            "recommendedValue": true,
+            "explanation": "When enabled, mount targets will have a stable logicalId that is linked to the associated subnet."
+          },
+          "@aws-cdk/aws-rds:auroraClusterChangeScopeOfInstanceParameterGroupWithEachParameters": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a scope of InstanceParameterGroup for AuroraClusterInstance with each parameters will change."
+          },
+          "@aws-cdk/aws-appsync:useArnForSourceApiAssociationIdentifier": {
+            "recommendedValue": true,
+            "explanation": "When enabled, will always use the arn for identifiers for CfnSourceApiAssociation in the GraphqlApi construct rather than id."
+          },
+          "@aws-cdk/aws-rds:preventRenderingDeprecatedCredentials": {
+            "recommendedValue": true,
+            "explanation": "When enabled, creating an RDS database cluster from a snapshot will only render credentials for snapshot credentials."
+          },
+          "@aws-cdk/aws-codepipeline-actions:useNewDefaultBranchForCodeCommitSource": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the CodeCommit source action is using the default branch name 'main'."
+          },
+          "@aws-cdk/aws-cloudwatch-actions:changeLambdaPermissionLogicalIdForLambdaAction": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the logical ID of a Lambda permission for a Lambda action includes an alarm ID."
+          },
+          "@aws-cdk/aws-codepipeline:crossAccountKeysDefaultValueToFalse": {
+            "recommendedValue": true,
+            "explanation": "Enables Pipeline to set the default value for crossAccountKeys to false."
+          },
+          "@aws-cdk/aws-codepipeline:defaultPipelineTypeToV2": {
+            "recommendedValue": true,
+            "explanation": "Enables Pipeline to set the default pipeline type to V2."
+          },
+          "@aws-cdk/aws-kms:reduceCrossAccountRegionPolicyScope": {
+            "recommendedValue": true,
+            "explanation": "When enabled, IAM Policy created from KMS key grant will reduce the resource scope to this key only."
+          },
+          "@aws-cdk/pipelines:reduceAssetRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "Remove the root account principal from PipelineAssetsFileRole trust policy",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-eks:nodegroupNameAttribute": {
+            "recommendedValue": true,
+            "explanation": "When enabled, nodegroupName attribute of the provisioned EKS NodeGroup will not have the cluster name prefix."
+          },
+          "@aws-cdk/aws-ec2:ebsDefaultGp3Volume": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default volume type of the EBS volume will be GP3"
+          },
+          "@aws-cdk/aws-ecs:removeDefaultDeploymentAlarm": {
+            "recommendedValue": true,
+            "explanation": "When enabled, remove default deployment alarm settings"
+          },
+          "@aws-cdk/custom-resources:logApiResponseDataPropertyTrueDefault": {
+            "recommendedValue": false,
+            "explanation": "When enabled, the custom resource used for `AwsCustomResource` will configure the `logApiResponseData` property as true by default"
+          },
+          "@aws-cdk/aws-s3:keepNotificationInImportedBucket": {
+            "recommendedValue": false,
+            "explanation": "When enabled, Adding notifications to a bucket in the current stack will not remove notification from imported stack."
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:useNewS3UriParametersForBedrockInvokeModelTask": {
+            "recommendedValue": true,
+            "explanation": "When enabled, use new props for S3 URI field in task definition of state machine for bedrock invoke model.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/core:explicitStackTags": {
+            "recommendedValue": true,
+            "explanation": "When enabled, stack tags need to be assigned explicitly on a Stack."
+          },
+          "@aws-cdk/aws-ecs:enableImdsBlockingDeprecatedFeature": {
+            "recommendedValue": false,
+            "explanation": "When set to true along with canContainersAccessInstanceRole=false in ECS cluster, new updated commands will be added to UserData to block container accessing IMDS. **Applicable to Linux only. IMPORTANT: See [details.](#aws-cdkaws-ecsenableImdsBlockingDeprecatedFeature)**"
+          },
+          "@aws-cdk/aws-ecs:disableEcsImdsBlocking": {
+            "recommendedValue": true,
+            "explanation": "When set to true, CDK synth will throw exception if canContainersAccessInstanceRole is false. **IMPORTANT: See [details.](#aws-cdkaws-ecsdisableEcsImdsBlocking)**"
+          },
+          "@aws-cdk/aws-ecs:reduceEc2FargateCloudWatchPermissions": {
+            "recommendedValue": true,
+            "explanation": "When enabled, we will only grant the necessary permissions when users specify cloudwatch log group through logConfiguration"
+          },
+          "@aws-cdk/aws-dynamodb:resourcePolicyPerReplica": {
+            "recommendedValue": true,
+            "explanation": "When enabled will allow you to specify a resource policy per replica, and not copy the source table policy to all replicas"
+          },
+          "@aws-cdk/aws-ec2:ec2SumTImeoutEnabled": {
+            "recommendedValue": true,
+            "explanation": "When enabled, initOptions.timeout and resourceSignalTimeout values will be summed together."
+          },
+          "@aws-cdk/aws-appsync:appSyncGraphQLAPIScopeLambdaPermission": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a Lambda authorizer Permission created when using GraphqlApi will be properly scoped with a SourceArn."
+          },
+          "@aws-cdk/aws-rds:setCorrectValueForDatabaseInstanceReadReplicaInstanceResourceId": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the value of property `instanceResourceId` in construct `DatabaseInstanceReadReplica` will be set to the correct value which is `DbiResourceId` instead of currently `DbInstanceArn`"
+          },
+          "@aws-cdk/core:cfnIncludeRejectComplexResourceUpdateCreatePolicyIntrinsics": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CFN templates added with `cfn-include` will error if the template contains Resource Update or Create policies with CFN Intrinsics that include non-primitive values."
+          },
+          "@aws-cdk/aws-lambda-nodejs:sdkV3ExcludeSmithyPackages": {
+            "recommendedValue": true,
+            "explanation": "When enabled, both `@aws-sdk` and `@smithy` packages will be excluded from the Lambda Node.js 18.x runtime to prevent version mismatches in bundled applications."
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:fixRunEcsTaskPolicy": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the resource of IAM Run Ecs policy generated by SFN EcsRunTask will reference the definition, instead of constructing ARN."
+          },
+          "@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the BastionHost construct will use the latest Amazon Linux 2023 AMI, instead of Amazon Linux 2."
+          },
+          "@aws-cdk/core:aspectStabilization": {
+            "recommendedValue": true,
+            "explanation": "When enabled, a stabilization loop will be run when invoking Aspects during synthesis.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-route53-targets:userPoolDomainNameMethodWithoutCustomResource": {
+            "recommendedValue": true,
+            "explanation": "When enabled, use a new method for DNS Name of user pool domain target without creating a custom resource."
+          },
+          "@aws-cdk/aws-elasticloadbalancingV2:albDualstackWithoutPublicIpv4SecurityGroupRulesDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default security group ingress rules will allow IPv6 ingress from anywhere"
+          },
+          "@aws-cdk/aws-iam:oidcRejectUnauthorizedConnections": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the default behaviour of OIDC provider will reject unauthorized connections"
+          },
+          "@aws-cdk/core:enableAdditionalMetadataCollection": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK will expand the scope of usage data collected to better inform CDK development and improve communication for security concerns and emerging issues."
+          },
+          "@aws-cdk/aws-lambda:createNewPoliciesWithAddToRolePolicy": {
+            "recommendedValue": false,
+            "explanation": "[Deprecated] When enabled, Lambda will create new inline policies with AddToRolePolicy instead of adding to the Default Policy Statement"
+          },
+          "@aws-cdk/aws-s3:setUniqueReplicationRoleName": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK will automatically generate a unique role name that is used for s3 object replication."
+          },
+          "@aws-cdk/pipelines:reduceStageRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "Remove the root account principal from Stage addActions trust policy",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-events:requireEventBusPolicySid": {
+            "recommendedValue": true,
+            "explanation": "When enabled, grantPutEventsTo() will use resource policies with Statement IDs for service principals."
+          },
+          "@aws-cdk/core:aspectPrioritiesMutating": {
+            "recommendedValue": true,
+            "explanation": "When set to true, Aspects added by the construct library on your behalf will be given a priority of MUTATING."
+          },
+          "@aws-cdk/aws-dynamodb:retainTableReplica": {
+            "recommendedValue": true,
+            "explanation": "When enabled, table replica will be default to the removal policy of source table unless specified otherwise."
+          },
+          "@aws-cdk/cognito:logUserPoolClientSecretValue": {
+            "recommendedValue": false,
+            "explanation": "When disabled, the value of the user pool client secret will not be logged in the custom resource lambda function logs."
+          },
+          "@aws-cdk/pipelines:reduceCrossAccountActionRoleTrustScope": {
+            "recommendedValue": true,
+            "explanation": "When enabled, scopes down the trust policy for the cross-account action role",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-stepfunctions:useDistributedMapResultWriterV2": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the resultWriterV2 property of DistributedMap will be used insted of resultWriter"
+          },
+          "@aws-cdk/s3-notifications:addS3TrustKeyPolicyForSnsSubscriptions": {
+            "recommendedValue": true,
+            "explanation": "Add an S3 trust policy to a KMS key resource policy for SNS subscriptions."
+          },
+          "@aws-cdk/aws-ec2:requirePrivateSubnetsForEgressOnlyInternetGateway": {
+            "recommendedValue": true,
+            "explanation": "When enabled, the EgressOnlyGateway resource is only created if private subnets are defined in the dual-stack VPC."
+          },
+          "@aws-cdk/aws-ec2-alpha:useResourceIdForVpcV2Migration": {
+            "recommendedValue": false,
+            "explanation": "When enabled, use resource IDs for VPC V2 migration"
+          },
+          "@aws-cdk/aws-s3:publicAccessBlockedByDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, setting any combination of options for BlockPublicAccess will automatically set true for any options not defined."
+          },
+          "@aws-cdk/aws-lambda:useCdkManagedLogGroup": {
+            "recommendedValue": true,
+            "explanation": "When enabled, CDK creates and manages loggroup for the lambda function"
+          },
+          "@aws-cdk/aws-elasticloadbalancingv2:networkLoadBalancerWithSecurityGroupByDefault": {
+            "recommendedValue": true,
+            "explanation": "When enabled, Network Load Balancer will be created with a security group by default."
+          },
+          "@aws-cdk/aws-stepfunctions-tasks:httpInvokeDynamicJsonPathEndpoint": {
+            "recommendedValue": true,
+            "explanation": "When enabled, allows using a dynamic apiEndpoint with JSONPath format in HttpInvoke tasks.",
+            "unconfiguredBehavesLike": {
+              "v2": true
+            }
+          },
+          "@aws-cdk/aws-ecs-patterns:uniqueTargetGroupId": {
+            "recommendedValue": true,
+            "explanation": "When enabled, ECS patterns will generate unique target group IDs to prevent conflicts during load balancer replacement"
+          }
+        }
+      }
+    }
+  },
+  "minimumCliVersion": "2.1031.2"
+}

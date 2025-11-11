@@ -1,5 +1,4 @@
-import { defineData } from '@aws-amplify/backend';
-import { a } from '@aws-amplify/backend/a';
+import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
 const schema = a.schema({
   TrainingData: a.model({
@@ -11,28 +10,16 @@ const schema = a.schema({
     confidence: a.float().required(),
     processingTime: a.float().required(),
     userFlaggedIncorrect: a.boolean().default(false),
-  }).authorization((allow) => [
+  }).authorization((allow: any) => [
     allow.publicApiKey().to(['read']),
     allow.authenticated().to(['read', 'create', 'update']),
   ]),
-
-  Stats: a.query()
-    .arguments({
-      dummy: a.string(),
-    })
-    .returns(
-      a.json()
-    )
-    .handler(
-      a.handler.function('statsFunction')
-    )
-    .authorization((allow) => [
-      allow.publicApiKey().to(['read']),
-    ]),
-}).authorization((allow) => [
+}).authorization((allow: any) => [
   allow.publicApiKey(),
   allow.authenticated(),
 ]);
+
+export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
   schema,

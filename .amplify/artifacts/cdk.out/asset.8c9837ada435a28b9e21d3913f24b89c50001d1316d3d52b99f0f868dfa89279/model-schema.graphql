@@ -1,0 +1,12 @@
+type TrainingData @model @auth(rules: [{allow: public, provider: apiKey, operations: [read]},
+  {allow: private, operations: [read, create, update]}])
+{
+  id: ID! @primaryKey
+  timestamp: AWSDateTime!
+  prompt: String!
+  predictedClass: Int!
+  label: String!
+  confidence: Float!
+  processingTime: Float!
+  userFlaggedIncorrect: Boolean @default(value: "false")
+}

@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
-import ChatMessage from './components/ChatMessage';
-import Sidebar from './components/Sidebar';
-import './amplifyConfig';
+import ChatMessage from './components/ChatMessage.js';
+import Sidebar from './components/Sidebar.js';
+import './amplifyConfig.js';
 import { generateClient } from 'aws-amplify/api';
 
 const client = generateClient();
+
+// Flask API URL - uses environment variable or defaults to localhost
+const FLASK_API_URL = process.env.REACT_APP_FLASK_API_URL || 'http://localhost:5001';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -45,72 +48,89 @@ I'm here to help you communicate safely and effectively. I use advanced AI to an
   }, []);
 
   const fetchStats = async () => {
-    try {
-      const result = await client.graphql({
-        query: `
-          query GetStats {
-            stats(dummy: "stats") {
-              totalPrompts
-              safeCount
-              misuseCount
-              flaggedCount
-            }
-          }
-        `
-      });
-      
-      const statsData = result.data.stats;
-      setStats({
-        total_prompts: statsData.totalPrompts,
-        safe_count: statsData.safeCount,
-        misuse_count: statsData.misuseCount,
-        flagged_count: statsData.flaggedCount
-      });
-    } catch (error) {
-      console.error('Error fetching stats from Amplify:', error);
-      // Fallback to Flask API
+    // Check if Amplify is configured (has real endpoint, not placeholder)
+    const hasAmplify = process.env.REACT_APP_AMPLIFY_GRAPHQL_ENDPOINT && 
+                      !process.env.REACT_APP_AMPLIFY_GRAPHQL_ENDPOINT.includes('your-amplify-endpoint');
+
+    if (hasAmplify) {
       try {
-        const response = await axios.get('/api/stats');
-        setStats(response.data);
-      } catch (fallbackError) {
-        console.error('Error fetching stats from Flask:', fallbackError);
+        const result = await client.graphql({
+          query: `
+            query GetStats {
+              stats(dummy: "stats") {
+                totalPrompts
+                safeCount
+                misuseCount
+                flaggedCount
+              }
+            }
+          `
+        });
+        
+        const statsData = result.data.stats;
+        setStats({
+          total_prompts: statsData.totalPrompts,
+          safe_count: statsData.safeCount,
+          misuse_count: statsData.misuseCount,
+          flagged_count: statsData.flaggedCount
+        });
+        return;
+      } catch (error) {
+        console.error('Error fetching stats from Amplify:', error);
+        // Fall through to Flask
       }
+    }
+
+    // Use Flask API
+    try {
+      const response = await axios.get(`${FLASK_API_URL}/api/stats`);
+      setStats(response.data);
+    } catch (error) {
+      console.error('Error fetching stats from Flask:', error);
     }
   };
 
   const flagClassification = async (classificationId) => {
-    try {
-      await client.graphql({
-        query: `
-          mutation UpdateTrainingData($input: UpdateTrainingDataInput!) {
-            updateTrainingData(input: $input) {
-              id
-              userFlaggedIncorrect
+    // Check if Amplify is configured
+    const hasAmplify = process.env.REACT_APP_AMPLIFY_GRAPHQL_ENDPOINT && 
+                      !process.env.REACT_APP_AMPLIFY_GRAPHQL_ENDPOINT.includes('your-amplify-endpoint');
+
+    if (hasAmplify) {
+      try {
+        await client.graphql({
+          query: `
+            mutation UpdateTrainingData($input: UpdateTrainingDataInput!) {
+              updateTrainingData(input: $input) {
+                id
+                userFlaggedIncorrect
+              }
+            }
+          `,
+          variables: {
+            input: {
+              id: classificationId,
+              userFlaggedIncorrect: true
             }
           }
-        `,
-        variables: {
-          input: {
-            id: classificationId,
-            userFlaggedIncorrect: true
-          }
-        }
-      });
-      
-      alert('Classification flagged as incorrect. Thank you for your feedback!');
-      // Refresh stats after flagging
-      fetchStats();
-    } catch (error) {
-      console.error('Error flagging in Amplify:', error);
-      // Fallback to Flask API
-      try {
-        await axios.post('/api/flag', { id: classificationId });
+        });
+        
         alert('Classification flagged as incorrect. Thank you for your feedback!');
         fetchStats();
-      } catch (fallbackError) {
-        console.error('Error flagging in Flask:', fallbackError);
-        alert('Error flagging classification. Please try again.');
+        return;
+      } catch (error) {
+        console.error('Error flagging in Amplify:', error);
+        // Fall through to Flask
       }
+    }
+
+    // Use Flask API
+    try {
+      await axios.post(`${FLASK_API_URL}/api/flag`, { id: classificationId });
+      alert('Classification flagged as incorrect. Thank you for your feedback!');
+      fetchStats();
+    } catch (error) {
+      console.error('Error flagging in Flask:', error);
+      alert('Error flagging classification. Please try again.');
     }
   };
 
@@ -128,11 +148,11 @@ I'm here to help you communicate safely and effectively. I use advanced AI to an
     setIsLoading(true);
 
     try {
-      const response = await axios.post('/api/classify', {
+      const response = await axios.post(`${FLASK_API_URL}/api/classify`, {
         prompt: inputValue
       });
 
-      const { id, predicted_class, label, confidence, processing_time } = response.data;
+      const { id, predicted_class, confidence, processing_time } = response.data;
 
       let assistantContent;
       if (predicted_class === 1) { // MISUSE
