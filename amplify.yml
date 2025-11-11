@@ -4,14 +4,14 @@ backend:
     build:
       commands:
         - rm -rf node_modules package-lock.json
-        - npm install --no-optional
+        - npm install --legacy-peer-deps
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
     preBuild:
       commands:
         - rm -rf node_modules package-lock.json .npm
-        - npm install --no-optional
+        - npm install --legacy-peer-deps
     build:
       commands:
         - npm run build
