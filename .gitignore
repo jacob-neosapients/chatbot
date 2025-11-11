@@ -1,5 +1,8 @@
 .streamlit/secrets.toml
 
+# Training data collected during runtime
+training_data.jsonl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
