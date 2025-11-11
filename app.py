@@ -5,6 +5,7 @@ import torch
 import time
 import json
 import os
+import requests
 from datetime import datetime
 
 app = Flask(__name__)
@@ -12,8 +13,12 @@ CORS(app)  # Enable CORS for React frontend
 
 import uuid
 
+# Amplify GraphQL endpoint - will be set via environment variables
+AMPLIFY_GRAPHQL_ENDPOINT = os.getenv('AMPLIFY_GRAPHQL_ENDPOINT', 'https://your-amplify-endpoint.amazonaws.com/graphql')
+AMPLIFY_API_KEY = os.getenv('AMPLIFY_API_KEY', 'your-api-key')
+
 # Initialize training data collection
-TRAINING_DATA_FILE = "training_data.jsonl"
+TRAINING_DATA_FILE = "training_data.jsonl"  # Keep for backward compatibility during migration
 
 # Load the guardrail model
 def load_model():
@@ -32,9 +37,49 @@ print("Loading model...")
 tokenizer, model, device = load_model()
 print(f"Model loaded successfully on {device}")
 
+def get_stats_from_amplify():
+    """Get training data statistics from Amplify GraphQL"""
+    query = """
+    query GetStats {
+      stats(dummy: "stats") {
+        totalPrompts
+        safeCount
+        misuseCount
+        flaggedCount
+      }
+    }
+    """
+
+    headers = {
+        'Content-Type': 'application/json',
+        'x-api-key': AMPLIFY_API_KEY
+    }
+
+    try:
+        response = requests.post(
+            AMPLIFY_GRAPHQL_ENDPOINT,
+            json={'query': query},
+            headers=headers,
+            timeout=10
+        )
+        response.raise_for_status()
+        data = response.json()
+        if 'data' in data and 'stats' in data['data']:
+            return data['data']['stats']
+    except Exception as e:
+        print(f"Failed to get stats from Amplify: {e}")
+    
+    return None
+
 def save_prompt_for_training(prompt, predicted_class, confidence, time_taken):
-    """Save prompt data in JSONL format for future model training"""
+    """Save prompt data - tries Amplify first, falls back to JSONL"""
     entry_id = str(uuid.uuid4())
+
+    # Try to save to Amplify GraphQL first
+    if save_to_amplify_graphql(prompt, predicted_class, confidence, time_taken, entry_id):
+        return entry_id
+
+    # Fallback to JSONL file
     data_entry = {
         "id": entry_id,
         "timestamp": datetime.now().isoformat(),
@@ -45,11 +90,11 @@ def save_prompt_for_training(prompt, predicted_class, confidence, time_taken):
         "processing_time": float(time_taken),
         "user_flagged_incorrect": False
     }
-    
+
     # Append to JSONL file (one JSON object per line)
     with open(TRAINING_DATA_FILE, "a", encoding="utf-8") as f:
         f.write(json.dumps(data_entry) + "\n")
-    
+
     return entry_id
 
 @app.route('/api/classify', methods=['POST'])
@@ -108,6 +153,11 @@ def flag_classification():
         if not entry_id:
             return jsonify({'error': 'No entry ID provided'}), 400
         
+        # Try to flag in Amplify GraphQL first
+        if flag_in_amplify_graphql(entry_id):
+            return jsonify({'success': True, 'message': 'Classification flagged as incorrect'})
+        
+        # Fallback to JSONL file update
         # Read all entries
         entries = []
         if os.path.exists(TRAINING_DATA_FILE):
@@ -141,11 +191,18 @@ def flag_classification():
 def get_statistics():
     """Get training data statistics"""
     try:
+        # Try to get stats from Amplify GraphQL first
+        amplify_stats = get_stats_from_amplify()
+        if amplify_stats:
+            return jsonify(amplify_stats)
+        
+        # Fallback to JSONL file calculation
         if not os.path.exists(TRAINING_DATA_FILE):
             return jsonify({
                 'total_prompts': 0,
                 'safe_count': 0,
-                'misuse_count': 0
+                'misuse_count': 0,
+                'flagged_count': 0
             })
         
         with open(TRAINING_DATA_FILE, "r", encoding="utf-8") as f:
