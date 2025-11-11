@@ -6,7 +6,6 @@ function Sidebar({ stats }) {
       <div className="sidebar-section">
         <h3>📊 Model Information</h3>
         <div className="info-box">
-          <p><strong>Model:</strong> DeBERTa v2 for Sequence Classification</p>
           <p><strong>Classes:</strong></p>
           <ul>
             <li>🟢 SAFE: Appropriate content</li>
@@ -23,11 +22,10 @@ function Sidebar({ stats }) {
       </div>
 
       <div className="sidebar-section">
-        <h3>📚 Training Data Collection</h3>
         {stats.total_prompts > 0 ? (
           <div className="stats-container">
             <div className="stat-item success">
-              <strong>Total Prompts Collected:</strong> {stats.total_prompts}
+              <strong>Total Prompts:</strong> {stats.total_prompts}
             </div>
             <div className="metrics-grid">
               <div className="metric-card">
@@ -43,7 +41,6 @@ function Sidebar({ stats }) {
                 <div className="metric-value">{stats.flagged_count || 0}</div>
               </div>
             </div>
-            <p className="file-info">📁 Saved to: <code>training_data.jsonl</code></p>
           </div>
         ) : (
           <div className="info-box">
@@ -62,10 +59,6 @@ function Sidebar({ stats }) {
             <li>"How do I rebalance a portfolio?"</li>
           </ul>
         </div>
-      </div>
-
-      <div className="sidebar-footer">
-        <p>Built with ❤️ using React</p>
       </div>
     </div>
   );

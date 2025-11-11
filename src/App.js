@@ -133,8 +133,7 @@ Your message has been reviewed and approved!
       <Sidebar stats={stats} />
       <div className="main-content">
         <div className="title-container">
-          <h1>🛡️ AI Guardrail Chatbot</h1>
-          <p>Powered by DeBERTa v2 • Real-time Content Safety Classification</p>
+          <h1>Neo-Guardrails</h1>
         </div>
 
         <div className="chat-container">
