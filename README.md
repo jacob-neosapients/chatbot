@@ -1,15 +1,15 @@
 # �️ AI Guardrail Chatbot
 
-A modern AI chatbot application with real-time content safety classification powered by DistilBERT. Built with React frontend and Flask backend.
+A modern AI chatbot application with real-time content safety classification powered by DeBERTa v2. Built with React frontend and Flask backend.
 
 [![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?style=flat&logo=react)](https://reactjs.org/)
 [![Backend](https://img.shields.io/badge/Backend-Flask-000000?style=flat&logo=flask)](https://flask.palletsprojects.com/)
-[![Model](https://img.shields.io/badge/Model-DistilBERT-FF6F00?style=flat)](https://huggingface.co/docs/transformers/model_doc/distilbert)
+[![Model](https://img.shields.io/badge/Model-DeBERTa%20v2-FF6F00?style=flat)](https://huggingface.co/docs/transformers/model_doc/deberta-v2)
 
 ## Features
 
 - 🛡️ **Real-time Content Moderation**: Instantly classify user input as SAFE or MISUSE
-- ⚡ **Fast Inference**: Powered by DistilBERT for quick response times
+- ⚡ **Fast Inference**: Powered by DeBERTa v2 for quick response times
 - 📊 **Confidence Scores**: Get detailed classification metrics
 - 📈 **Training Data Collection**: Automatically collect and store interaction data for model improvement
 - 💬 **Beautiful UI**: Modern, responsive interface with gradient styling
@@ -18,8 +18,8 @@ A modern AI chatbot application with real-time content safety classification pow
 ## Architecture
 
 - **Frontend**: React.js with modern hooks and component architecture
-- **Backend**: Flask API serving the DistilBERT model
-- **Model**: DistilBERT for Sequence Classification (2 classes: SAFE/MISUSE)
+- **Backend**: Flask API serving the DeBERTa v2 model
+- **Model**: DeBERTa v2 for Sequence Classification (2 classes: SAFE/MISUSE)
 - **Data Storage**: JSONL format for training data collection
 
 ## Prerequisites
@@ -52,7 +52,7 @@ You need to run both the backend server and the frontend development server.
 python app.py
 ```
 
-The backend API will start on `http://localhost:5000`
+The backend API will start on `http://localhost:5001`
 
 ### Terminal 2: Start the React Frontend
 
@@ -103,7 +103,7 @@ Health check endpoint.
 ```json
 {
   "status": "healthy",
-  "model": "DistilBERT",
+  "model": "DeBERTa v2",
   "device": "cuda:0"
 }
 ```
@@ -126,7 +126,7 @@ chatbot/
 │   └── components/
 │       ├── ChatMessage.js    # Message display component
 │       └── Sidebar.js        # Sidebar component
-├── rm_guardrail_model/       # DistilBERT model files
+├── rm_guardrail_model/       # DeBERTa v2 model files
 │   ├── config.json
 │   ├── model.safetensors
 │   ├── tokenizer.json
@@ -197,7 +197,7 @@ Try these example prompts to test the system:
 
 ## Model Information
 
-- **Architecture**: DistilBERT (distilled version of BERT)
+- **Architecture**: DeBERTa v2 (improved version of BERT)
 - **Classes**: 2 (SAFE, MISUSE)
 - **Device**: Automatically uses GPU if available, falls back to CPU
 - **Mode**: Evaluation mode for inference
@@ -208,11 +208,11 @@ Try these example prompts to test the system:
 
 - **Model not loading**: Ensure the `rm_guardrail_model/` directory contains all required files
 - **Import errors**: Run `pip install -r requirements.txt`
-- **Port conflicts**: Change the port in `app.py` if 5000 is in use
+- **Port conflicts**: Change the port in `app.py` if 5001 is in use
 
 ### Frontend Issues
 
-- **API connection errors**: Ensure the Flask backend is running on port 5000
+- **API connection errors**: Ensure the Flask backend is running on port 5001
 - **npm install errors**: Try deleting `node_modules/` and `package-lock.json`, then run `npm install` again
 - **Proxy errors**: Check that `"proxy": "http://localhost:5000"` is in `package.json`
 

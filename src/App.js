@@ -8,7 +8,7 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [stats, setStats] = useState({ total_prompts: 0, safe_count: 0, misuse_count: 0 });
+  const [stats, setStats] = useState({ total_prompts: 0, safe_count: 0, misuse_count: 0, flagged_count: 0 });
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -49,6 +49,17 @@ I'm here to help you communicate safely and effectively. I use advanced AI to an
     }
   };
 
+  const flagClassification = async (classificationId) => {
+    try {
+      await axios.post('/api/flag', { id: classificationId });
+      // Optionally show a success message or update the message
+      alert('Classification flagged as incorrect. Thank you for your feedback!');
+    } catch (error) {
+      console.error('Error flagging classification:', error);
+      alert('Error flagging classification. Please try again.');
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!inputValue.trim() || isLoading) return;
@@ -67,7 +78,7 @@ I'm here to help you communicate safely and effectively. I use advanced AI to an
         prompt: inputValue
       });
 
-      const { predicted_class, label, confidence, processing_time } = response.data;
+      const { id, predicted_class, label, confidence, processing_time } = response.data;
 
       let assistantContent;
       if (predicted_class === 1) { // MISUSE
@@ -96,7 +107,9 @@ Your message has been reviewed and approved!
 
       const assistantMessage = {
         role: 'assistant',
-        content: assistantContent
+        content: assistantContent,
+        classificationId: id,
+        predictedClass: predicted_class
       };
 
       setMessages(prev => [...prev, assistantMessage]);
@@ -121,13 +134,13 @@ Your message has been reviewed and approved!
       <div className="main-content">
         <div className="title-container">
           <h1>🛡️ AI Guardrail Chatbot</h1>
-          <p>Powered by DistilBERT • Real-time Content Safety Classification</p>
+          <p>Powered by DeBERTa v2 • Real-time Content Safety Classification</p>
         </div>
 
         <div className="chat-container">
           <div className="messages-container">
             {messages.map((message, index) => (
-              <ChatMessage key={index} message={message} />
+              <ChatMessage key={index} message={message} onFlag={flagClassification} />
             ))}
             {isLoading && (
               <div className="loading-indicator">
