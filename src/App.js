@@ -8,8 +8,8 @@ import { generateClient } from 'aws-amplify/api';
 
 const client = generateClient();
 
-// Flask API URL - uses environment variable or defaults to localhost
-const FLASK_API_URL = process.env.REACT_APP_FLASK_API_URL || 'http://localhost:5001';
+// Flask API URL - uses environment variable or defaults to EC2 HTTPS endpoint
+const FLASK_API_URL = process.env.REACT_APP_FLASK_API_URL || 'https://ec2-13-232-101-149.ap-south-1.compute.amazonaws.com';
 
 function App() {
   const [messages, setMessages] = useState([]);
