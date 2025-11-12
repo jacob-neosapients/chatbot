@@ -12,6 +12,7 @@ frontend:
       commands:
         - rm -rf node_modules package-lock.json .npm
         - npm install --legacy-peer-deps
+        - echo "REACT_APP_FLASK_API_URL=https://ec2-13-232-101-149.ap-south-1.compute.amazonaws.com" > .env.production
     build:
       commands:
         - npm run build
@@ -21,3 +22,13 @@ frontend:
       - '**/*'
   cache:
     paths: []
+# Proxy /api requests to EC2 backend to avoid mixed content issues
+customHeaders:
+  - pattern: '**/*'
+    headers:
+      - key: 'Access-Control-Allow-Origin'
+        value: '*'
+      - key: 'Access-Control-Allow-Methods'
+        value: 'GET,POST,OPTIONS'
+      - key: 'Access-Control-Allow-Headers'
+        value: 'Content-Type'
