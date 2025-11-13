@@ -39,3 +39,4 @@ amplify/backend/awscloudformation/
 
 # Misc
 .DS_Store
+.venv/
