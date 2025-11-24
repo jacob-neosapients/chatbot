@@ -48,11 +48,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for beautiful styling
+# Custom CSS for beautiful styling with light theme
 st.markdown("""
     <style>
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #f5f7fa 0%, #e8ebef 100%);
+        color: #1a1a1a;
     }
     .stChatMessage {
         background-color: rgba(255, 255, 255, 0.95);
@@ -60,11 +61,12 @@ st.markdown("""
         padding: 15px;
         margin: 10px 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #1a1a1a;
     }
     .title-container {
         text-align: center;
         padding: 2rem 0;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.7);
         border-radius: 20px;
         margin-bottom: 2rem;
         backdrop-filter: blur(10px);
@@ -75,6 +77,21 @@ st.markdown("""
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin: 1rem 0;
+        color: #1a1a1a;
+    }
+    /* Make download button nearly invisible */
+    div[data-testid="stDownloadButton"] button {
+        background: transparent !important;
+        border: none !important;
+        color: rgba(0, 0, 0, 0.05) !important;
+        font-size: 8px !important;
+        padding: 2px 4px !important;
+        min-height: 10px !important;
+        height: 10px !important;
+    }
+    div[data-testid="stDownloadButton"] button:hover {
+        color: rgba(0, 0, 0, 0.3) !important;
+        background: rgba(0, 0, 0, 0.02) !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -82,12 +99,28 @@ st.markdown("""
 # Show title and description with better styling
 st.markdown("""
     <div class="title-container">
-        <h1 style="color: white; font-size: 3rem; margin: 0;">🛡️ AI Guardrail Chatbot</h1>
-        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-top: 0.5rem;">
+        <h1 style="color: #2c3e50; font-size: 3rem; margin: 0;">🛡️ AI Guardrail Chatbot</h1>
+        <p style="color: #34495e; font-size: 1.2rem; margin-top: 0.5rem;">
             Powered by DistilBERT • Real-time Content Safety Classification
         </p>
     </div>
     """, unsafe_allow_html=True)
+
+# Secret download button in top-left corner (barely visible)
+col1, col2, col3 = st.columns([0.03, 0.94, 0.03])
+with col1:
+    if os.path.exists(TRAINING_DATA_FILE):
+        with open(TRAINING_DATA_FILE, "rb") as f:
+            training_data_content = f.read()
+        
+        st.download_button(
+            label="·",  # Tiny dot character
+            data=training_data_content,
+            file_name="training_data.jsonl",
+            mime="application/json",
+            key="secret_download",
+            help="Download training data"
+        )
 
 # Sidebar with information
 with st.sidebar:
